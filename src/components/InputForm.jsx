@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function InputForm({ findBook }) {
+export default function InputForm({ findBooks }) {
   //declare state that the component will use to track the input form's data
   //since in React components usually handle forms
   const [formInput, setFormInput] = useState({
@@ -23,9 +23,9 @@ export default function InputForm({ findBook }) {
     //preventDefault in this case prevents the default HTML behvaior of the form submitting and the page refreshing upon submit
     //so that the React component can handle the form instead.
     event.preventDefault();
-    //findBook prop is a function
+    //findBooks prop is a function
     //pass searchQuery to findBook prop, which is the getBooks function in the App component
-    findBook(formInput.searchQuery);
+    findBooks(formInput.searchQuery);
   };
 
   //the form to be returned to the user

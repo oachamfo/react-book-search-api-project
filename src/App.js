@@ -19,31 +19,32 @@ export default function App() {
   const getBooks = async (searchQuery) => {
     // fetch() function requests api data and stores it in response variable
     //`http://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`
-    searchQuery = "Owusu Achamfour";
+    searchQuery = "Harry Potter";
     try {
       const response = await fetch(
         `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}`
       );
       // json() function parses JSON response data into a JavaScript object
-      const data = await response.json();
+      const books_data = await response.json();
       //set the books state using setBooks function from books state
-      setBooks(data);
+      setBooks(books_data);
       console.log(books);
     } catch (e) {
       console.error(e);
     }
   };
 
-  //useEffect runs when component first renders but not for subsequent renders
+  //In this case, useEffect() runs when component first renders but not for subsequent renders because
+  //of the empty array used as a second parameter
   useEffect(() => {
-    getBooks("Owusu Achamfour");
+    getBooks("Harry Potter");
   }, []);
 
   //pass getBooks function as a prop called findBook to InputForm
   //pass books state as a prop called books to BookDisplay
   return (
     <div className="App">
-      <InputForm findBook={getBooks} />
+      <InputForm findBooks={getBooks} />
       <BookDisplay books={books} />
     </div>
   );
