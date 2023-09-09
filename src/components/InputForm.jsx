@@ -4,10 +4,11 @@ export default function InputForm({ findBooks }) {
   //declare state that the component will use to track the input form's data
   //since in React components usually handle forms
   const [formInput, setFormInput] = useState({
-    searchQuery: "",
+    bookTitleQuery: "",
+    authorLastNameQuery: "",
   });
 
-  //function to update searchQuery in formInput state as user types
+  //function to update search queries in formInput state as user types
   const handleChange = (event) => {
     /*The bracket notation followed by the colon means we are selecting a key on the formInput state object.
     From looking at the code for our form, event.target.name is a key on the event object, 
@@ -25,7 +26,7 @@ export default function InputForm({ findBooks }) {
     event.preventDefault();
     //findBooks prop is a function
     //pass searchQuery to findBook prop, which is the getBooks function in the App component
-    findBooks(formInput.searchQuery);
+    findBooks(formInput.bookTitleQuery, formInput.authorLastNameQuery);
   };
 
   //the form to be returned to the user
@@ -33,12 +34,22 @@ export default function InputForm({ findBooks }) {
     <div>
       <form onSubmit={handleSubmit}>
         <label>
-          Enter your book:
+          Book's Title:
           <input
             type="text"
-            name="searchQuery"
+            name="bookTitleQuery"
             onChange={handleChange}
-            value={formInput.searchQuery}
+            value={formInput.bookTitleQuery}
+          />
+        </label>
+
+        <label>
+          Author's Last Name:
+          <input
+            type="text"
+            name="authorLastNameQuery"
+            onChange={handleChange}
+            value={formInput.authorLastNameQuery}
           />
           <input type="submit" value="submit" />
         </label>

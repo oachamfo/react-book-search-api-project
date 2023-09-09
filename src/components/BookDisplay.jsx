@@ -5,10 +5,10 @@ export default function BookDisplay({ books }) {
   // console.log(books?.items);
   // {books?.items.map((book) => console.log(book.volumeInfo.title))}
   //{books?.items.map((book) => console.log(book.volumeInfo.authors))}
-
   return (
     <div className="book-display-component">
       <div className="book-display-heading">Book Display Results</div>
+
       <div className="books">
         {books?.items.map((book) => (
           <div>
