@@ -9,8 +9,10 @@ import InputForm from "./components/InputForm";
 import BookDisplay from "./components/BookDisplay";
 
 export default function App() {
-  //variable to hold api key
-  const apiKey = "";
+  //variable to hold api key loaded from .env file
+  //it appears variable must start with REACT_APP_ in .env file
+  //and also it appears .env file needs to be in the root folder of project
+  const yourAPIKey = process.env.REACT_APP_APIKEY;
 
   //state to track book data
   const [books, setBooks] = useState(null);
@@ -18,11 +20,12 @@ export default function App() {
   //function to get books
   const getBooks = async (searchQuery) => {
     // fetch() function requests api data and stores it in response variable
-    //`http://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`
-    searchQuery = "Harry Potter";
+    //example apis:
+    //`http://www.omdbapi.com/?apikey=${apiKey}&t=${searchQuery}`
+    //`https://www.googleapis.com/books/v1/volumes?q=${searchQuery}`
     try {
       const response = await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}`
+        `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}+inauthor:keyes&key=${yourAPIKey}`
       );
       // json() function parses JSON response data into a JavaScript object
       const books_data = await response.json();

@@ -1,3 +1,26 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+.book-display-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.book-display-heading {
+  align-self: center;
+  font-style: italic;
+  font-size: larger;
+  margin: 15px;
+}
+.books {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .title {
   font-weight: bold;
 }
