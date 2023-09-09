@@ -51,8 +51,8 @@ export default function InputForm({ findBooks }) {
             onChange={handleChange}
             value={formInput.authorLastNameQuery}
           />
-          <input type="submit" value="submit" />
         </label>
+        <input type="submit" value="submit" />
       </form>
     </div>
   );

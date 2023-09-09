@@ -1,0 +1,34 @@
+//imports
+import NoBookDisplay from "./NoBookDisplay";
+import ShowBooks from "./ShowBooks";
+
+//component to display book info
+//uses destructuring in the parameter: props.books is destructured
+export default function DisplayResults({ books }) {
+  //some example syntax to access the results using optional chaining:
+  // console.log(books?.items);
+  // {books?.items.map((book) => console.log(book.volumeInfo.title))}
+  //{books?.items.map((book) => console.log(book.volumeInfo.authors))}
+
+  //conditional rendering
+  let results;
+  console.log(books);
+  if (
+    books?.totalItems === 0 ||
+    books === null ||
+    books === undefined ||
+    books?.items === undefined ||
+    books?.items === null
+  ) {
+    results = <NoBookDisplay />;
+  } else {
+    results = <ShowBooks books={books} />;
+  }
+
+  return (
+    <div className="book-display-component">
+      <div className="book-display-heading">Book Display Results</div>
+      {results}
+    </div>
+  );
+}

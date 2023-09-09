@@ -6,7 +6,7 @@ import "./App.css";
 
 //import components
 import InputForm from "./components/InputForm";
-import BookDisplay from "./components/BookDisplay";
+import DisplayResults from "./components/DisplayResults";
 
 export default function App() {
   //variable to hold api key loaded from .env file
@@ -27,10 +27,12 @@ export default function App() {
     //bookTitleQuery = "The Great Gatsby";
     try {
       const response = await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${bookTitleQuery}+inauthor:${authorLastNameQuery}&key=${yourAPIKey}`
+        `https://www.googleapis.com/books/v1/volumes?q=${bookTitleQuery}+inauthor:${authorLastNameQuery}&key=${yourAPIKey}&startIndex=0&maxResults=3`
       );
+
       // json() function parses JSON response data into a JavaScript object
       const books_data = await response.json();
+
       //set the books state using setBooks function from books state
       setBooks(books_data);
       console.log(books);
@@ -50,7 +52,7 @@ export default function App() {
   return (
     <div className="App">
       <InputForm findBooks={getBooks} />
-      <BookDisplay books={books} />
+      <DisplayResults books={books} />
     </div>
   );
 }
