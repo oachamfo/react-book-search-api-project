@@ -44,7 +44,7 @@ export default function InputForm({ findBooks }) {
         </label>
 
         <label>
-          Author's Last Name:
+          Author's Name:
           <input
             type="text"
             name="authorLastNameQuery"
