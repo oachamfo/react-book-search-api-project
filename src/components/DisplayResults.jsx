@@ -12,8 +12,9 @@ export default function DisplayResults({ books }) {
 
   //conditional rendering
   let results;
-  console.log(books);
-  if (
+  //this is the version of conditional rendering using more verbose code
+  /*
+    if (
     books?.totalItems === 0 ||
     books === null ||
     books === undefined ||
@@ -24,7 +25,13 @@ export default function DisplayResults({ books }) {
   } else {
     results = <ShowBooks books={books} />;
   }
+*/
+  //version of conditional rendering using the ternary operator and also optional chaining
+  books?.totalItems > 0
+    ? (results = <ShowBooks books={books} />)
+    : (results = <NoBookDisplay />);
 
+  //what the component returns
   return (
     <div className="book-display-component">
       <div className="book-display-heading">Book Display Results</div>
