@@ -31,26 +31,50 @@ export default function App() {
       // json() function parses JSON response data into a JavaScript object
       const books_data = await response.json();
 
-      //set the books state using setBooks function from books state
-      setBooks(books_data);
-      console.log(books);
+      //set the books state by passing books_data to setBooks function from books state array
+      //if a user does not enter a book title and author name, the Google Books API by default returns its own random results
+      //the if statement is to make it so the results returned by Google Books API if user leaves book title and
+      //author's name blank are made null
+      if (bookTitleQuery === "" && authorLastNameQuery === "") {
+        setBooks("no-user-input");
+      } else {
+        setBooks(books_data);
+      }
+      //console.log(books);
     } catch (e) {
       console.error(e);
     }
   };
 
-  //In this case, useEffect() runs when component first renders but not for subsequent renders because
+  //In this case, useEffect() runs when App() component first renders but not for subsequent renders because
   //of the empty array used as a second parameter
   useEffect(() => {
-    getBooks("college", "achamfour");
+    getBooks("react for beginners", "google");
   }, []);
 
-  //pass getBooks function as a prop called findBooks to InputForm
-  //pass {books} state as a prop called books to BookDisplay
-  return (
-    <div className="App">
-      <InputForm findBooks={getBooks} />
-      <DisplayResults books={books} />
-    </div>
-  );
+  function firstVisit() {
+    return (
+      <div className="App">
+        <InputForm findBooks={getBooks} />
+        <p>Please wait...</p>
+        <p>Initializing website...</p>
+        <p>Loading books...</p>
+      </div>
+    );
+  }
+  function notFirstVisit() {
+    //pass getBooks function as a prop called findBooks to InputForm
+    //pass {books} state as a prop called books to DisplayResults
+    return (
+      <div className="App">
+        <InputForm findBooks={getBooks} />
+        <DisplayResults books={books} />
+      </div>
+    );
+  }
+
+  //conditional rendering based on if books state is set or not set
+  //if books state is set then notFirstVisit() if books state is not set then firstVisit()
+  //alternatively, a homepage component could have been displayed for firstVisit()
+  return books ? notFirstVisit() : firstVisit();
 }
