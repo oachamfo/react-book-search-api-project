@@ -19,12 +19,10 @@ export default function App() {
 
   //function to get books
   const getBooks = async (bookTitleQuery, authorLastNameQuery) => {
-    // fetch() function requests api data and stores it in response variable
-    //example apis:
+    // fetch() function requests API data and stores it in response variable
+    //example endpoints: URL formats to use to make a call to an API:
     //`http://www.omdbapi.com/?apikey=${apiKey}&t=${searchQuery}`
     //`https://www.googleapis.com/books/v1/volumes?q=${searchQuery}`
-    //authorLastNameQuery = "";
-    //bookTitleQuery = "The Great Gatsby";
     try {
       const response = await fetch(
         `https://www.googleapis.com/books/v1/volumes?q=${bookTitleQuery}+inauthor:${authorLastNameQuery}&key=${yourAPIKey}&startIndex=0&maxResults=3`
@@ -48,7 +46,7 @@ export default function App() {
   }, []);
 
   //pass getBooks function as a prop called findBooks to InputForm
-  //pass books state as a prop called books to BookDisplay
+  //pass {books} state as a prop called books to BookDisplay
   return (
     <div className="App">
       <InputForm findBooks={getBooks} />

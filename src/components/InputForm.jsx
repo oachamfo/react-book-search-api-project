@@ -21,8 +21,8 @@ export default function InputForm({ findBooks }) {
   };
 
   const handleSubmit = (event) => {
-    //preventDefault in this case prevents the default HTML behvaior of the form submitting and the page refreshing upon submit
-    //so that the React component can handle the form instead.
+    //preventDefault() in this case prevents the default HTML behvaior of the form submitting and the page refreshing upon submit
+    //so that the React component can handle the form instead of HTML.
     event.preventDefault();
     //findBooks prop is a function
     //pass searchQuery to findBook prop, which is the getBooks function in the App component

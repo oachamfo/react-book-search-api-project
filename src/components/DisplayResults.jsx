@@ -3,7 +3,7 @@ import NoBookDisplay from "./NoBookDisplay";
 import ShowBooks from "./ShowBooks";
 
 //component to display book info
-//uses destructuring in the parameter: props.books is destructured to {books}
+//uses destructuring in the parameter: destructuring {books} from props
 export default function DisplayResults({ books }) {
   //some example syntax to access the results of the API response using optional chaining:
   // console.log(books?.items);
@@ -29,6 +29,11 @@ export default function DisplayResults({ books }) {
     results = <ShowBooks books={books} />;
   }
 */
+
+  //if a user does not enter a book title and author name, the Google Books API by default returns random results
+  //the following line of code is to make it so the results returned by Google Books API if user leaves book title and
+  //author's name blank are made null
+
   //version of conditional rendering using the ternary operator and also optional chaining
   books?.totalItems > 0
     ? (results = <ShowBooks books={books} />)
