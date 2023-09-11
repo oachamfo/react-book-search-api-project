@@ -38,6 +38,7 @@ export default function InputForm({ findBooks }, { changeFirstVisit }) {
         <label>
           Book's Title:
           <input
+            className="input"
             type="text"
             name="bookTitleQuery"
             onChange={handleChange}
@@ -48,6 +49,7 @@ export default function InputForm({ findBooks }, { changeFirstVisit }) {
         <label>
           Author's Name:
           <input
+            className="input"
             type="text"
             name="authorLastNameQuery"
             onChange={handleChange}
