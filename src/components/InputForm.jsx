@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function InputForm({ findBooks }, { changeFirstVisit }) {
+export default function InputForm({ findBooks }) {
   //declare state that the component will use to track the input form's data
   //since in React components usually handle forms
   const [formInput, setFormInput] = useState({
