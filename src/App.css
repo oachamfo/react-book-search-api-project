@@ -22,6 +22,7 @@
   flex-direction: column;
   align-items: center;
   background-color: pink;
+  box-sizing: border-box;
 }
 .title {
   font-weight: bold;
@@ -79,4 +80,5 @@
 }
 .read-me {
   padding: 5px;
+  font-style: italic;
 }
