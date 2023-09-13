@@ -23,11 +23,11 @@ export default function ShowBooks({ books }) {
             )}
             {book?.volumeInfo?.previewLink ? (
               <a
-                className="link"
+                className="preview-link"
                 href={book?.volumeInfo?.previewLink}
                 target="_blank"
               >
-                Preview
+                Read Me
               </a>
             ) : (
               <></>
