@@ -10,8 +10,8 @@ import DisplayResults from "./components/DisplayResults";
 
 export default function App() {
   //variable to hold api key loaded from .env file
-  //it appears variable must start with REACT_APP_ in .env file
-  //and also it appears .env file needs to be in the root folder of project
+  //the variable must start with REACT_APP_ in the .env file
+  //and also the .env file needs to be in the root folder of project
   const yourAPIKey = process.env.REACT_APP_APIKEY;
 
   //state to track book data
@@ -39,6 +39,7 @@ export default function App() {
         setBooks("no-user-input");
       } else {
         setBooks(books_data);
+        console.log(books);
       }
       //console.log(books);
     } catch (e) {

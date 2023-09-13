@@ -34,30 +34,33 @@ export default function InputForm({ findBooks }) {
   //the form to be returned to the user
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Book's Title:
-          <input
-            className="input"
-            type="text"
-            name="bookTitleQuery"
-            onChange={handleChange}
-            value={formInput.bookTitleQuery}
-          />
-        </label>
-
-        <label>
-          Author's Name:
-          <input
-            className="input"
-            type="text"
-            name="authorLastNameQuery"
-            onChange={handleChange}
-            value={formInput.authorLastNameQuery}
-          />
-        </label>
-        <input type="submit" value="submit" />
-      </form>
+      <div className="form-div">
+        <center>
+          <form className="form" onSubmit={handleSubmit}>
+            <label>
+              Book's Title:
+              <input
+                className="input"
+                type="text"
+                name="bookTitleQuery"
+                onChange={handleChange}
+                value={formInput.bookTitleQuery}
+              />
+            </label>
+            <label>
+              Author's Name:
+              <input
+                className="input"
+                type="text"
+                name="authorLastNameQuery"
+                onChange={handleChange}
+                value={formInput.authorLastNameQuery}
+              />
+            </label>
+            <input type="submit" value="submit" />
+          </form>
+        </center>
+      </div>
     </div>
   );
 }

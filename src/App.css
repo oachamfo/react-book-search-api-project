@@ -11,6 +11,7 @@
   width: 100%;
 }
 .book-display-heading {
+  align-content: center;
   align-self: center;
   font-style: italic;
   font-size: larger;
@@ -20,6 +21,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: pink;
+}
+.book {
+  width: 80%;
+  background-color: yellow;
 }
 .title {
   font-weight: bold;
@@ -29,4 +35,30 @@
 }
 .input {
   margin: 5px;
+}
+.link {
+  text-decoration: none;
+}
+.form-div {
+  width: 100vw;
+
+  background-color: yellow;
+}
+.form-div form {
+  background-color: #a5d7e8;
+  align-content: center;
+}
+.book {
+  display: flex;
+  float: left;
+  width: 100vw;
+}
+.book-left-div {
+  width: 20%;
+  background-color: green;
+  align-items: center;
+}
+.book-right-div {
+  width: 80%;
+  background-color: blueviolet;
 }

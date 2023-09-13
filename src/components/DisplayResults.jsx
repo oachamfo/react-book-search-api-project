@@ -22,7 +22,7 @@ export default function DisplayResults({ books }) {
   return (
     <div className="book-display-component">
       <div className="book-display-heading">Book Display Results</div>
-      {results}
+      <div>{results}</div>
     </div>
   );
 }
