@@ -12,7 +12,7 @@ export default function InputForm({ findBooks }) {
   const handleChange = (event) => {
     /*The bracket notation followed by the colon means we are selecting a key on the formInput state object.
     From looking at the code for our form that the user will use to make an input for the search query, 
-    event.target.name is a key on the event object, and has a value equal to the properties in the formInput
+    event.target.name is a key on the event object, and has a value equal to a name of a property on the formInput
     state, and thus, is used to select the corresponding properties; the spread operator 
     copies formInput; and event.target.value is assigned to the corresponding key on formInput via event.target.name;
     Without the spread operator to copy formData, setFormData will just set formInput as an object with

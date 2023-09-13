@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# About Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Google Books API Book Search
 
-## Available Scripts
+    An Application Programming Interface (API) is an interface for two or more computer programs
+    to communicate with each other. An API provides a protocol through the use of endpoints for
+    which a caller can request data and a response can then be returned. The structure of an API
+    response object has to be known in order to write code that will interact with the response
+    object. This project demonstrates the use of an API to retrieve and display data to a user.
 
-In the project directory, you can run:
+## Motivation
 
-### `npm start`
+    This project was built as a requirement for a PerScholas software engineering cohort.
+    The primary project specifications were the following:
+        1. Use HTML, CSS, JavaScript and React
+        2. Use Fetch and UseEffect
+        3. make an API request to an external API
+        and insert some of the response data into a state and display that data
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Built With
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    The technologies used are HTML, CSS, JavaScript, and the React library.
+    CSS Flexbox was used for the layout. A user is presented with a React web form.
+    The user searches the Google Books API by inputing either or both of a book tile
+    and an author's last name. Some of the data including, book title, author's name,
+    year of publication and a link to the book from the response object is
+    then extracted and presented to the user.
 
-### `npm test`
+## How To Use Code Base
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The code base can be used as an educational material on how to use an API with React since
+the code base is very well commented. The code demonstrates the use of state, passing
+down props both in the form of state and functions. The code also shows how to pass data
+from a child component's state to a parent component's function as parameters if the function
+has been passed down to the child component by the parent component.
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+No special installation instructions. No backend DB to set up. Just deploy as one would a website.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# License
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+MIT (c) Owusuduah Achamfour
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Link to Website
