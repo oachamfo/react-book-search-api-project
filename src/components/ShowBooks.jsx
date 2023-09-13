@@ -27,7 +27,7 @@ export default function ShowBooks({ books }) {
                 href={book?.volumeInfo?.previewLink}
                 target="_blank"
               >
-                Read Me
+                <span className="read-me">Read Me</span>
               </a>
             ) : (
               <></>
