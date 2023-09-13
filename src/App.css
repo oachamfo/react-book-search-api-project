@@ -23,15 +23,15 @@
   align-items: center;
   background-color: pink;
 }
-.book {
-  width: 80%;
-  background-color: yellow;
-}
 .title {
   font-weight: bold;
+  font-size: larger;
+  color: white;
 }
 .authors {
   font-style: italic;
+  color: yellow;
+  font-weight: bold;
 }
 .input {
   margin: 5px;
@@ -54,7 +54,9 @@
 .book {
   display: flex;
   float: left;
-  width: 100vw;
+  width: 70%;
+  background-color: yellow;
+  box-sizing: border-box;
 }
 .book-left-div {
   width: 20%;
@@ -64,6 +66,7 @@
   border: 5px;
   border-style: solid;
   border-color: #ffa5a5;
+  box-sizing: border-box;
 }
 .book-right-div {
   width: 80%;
@@ -72,6 +75,7 @@
   border: 5px;
   border-style: solid;
   border-color: pink;
+  box-sizing: border-box;
 }
 .read-me {
   padding: 5px;
